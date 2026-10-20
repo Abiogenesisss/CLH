@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>安装游戏模块 · CLH</title>
+  <link rel="stylesheet" href="/module-manager.css">
+  <script src="/module-manager.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">CLH <span>CHARACTER LIBRARY</span></a><a href="/">返回收藏库 ↗</a></header>
+  <main>
+    <div class="eyebrow">YOUR LIBRARY, YOUR ACCESS</div>
+    <h1>开启你的收藏库。</h1>
+    <p class="intro">输入发行者提供的授权码，自动下载并安装已授权的游戏模块。</p>
+    <section class="panel" aria-labelledby="access-title">
+      <div class="panel-heading"><span class="step">01</span><h2 id="access-title">使用授权码</h2></div>
+      <form id="install-form">
+        <label for="license-code">授权码</label>
+        <div class="input-row"><input id="license-code" name="code" type="password" maxlength="128" required autocomplete="off" spellcheck="false" placeholder="粘贴你的授权码" aria-describedby="code-hint"><button id="install-button" type="submit" disabled>验证并安装 <span aria-hidden="true">→</span></button></div>
+        <p id="code-hint" class="hint">已有模块和收藏数据会保留。授权码不会保存在浏览器中。</p>
+      </form>
+      <p id="service-state" class="message" role="status" aria-live="polite">正在连接本地服务…</p>
+      <p id="install-error" class="error" role="alert" hidden></p>
+    </section>
+    <section id="install-progress" class="panel" aria-labelledby="progress-title" hidden>
+      <div class="panel-heading"><span class="step">02</span><h2 id="progress-title">正在安装</h2><span id="module-count" class="count"></span></div>
+      <p id="progress-detail" class="message" aria-live="polite"></p>
+      <progress id="download-progress" aria-label="模块下载进度"></progress>
+      <ul id="installed-modules" aria-label="已处理的模块"></ul>
+      <a id="open-library" class="library-link" href="/" hidden>进入收藏库 →</a>
+    </section>
+    <footer>CLH <span>角色资源收藏与鉴赏</span></footer>
+  </main>
+</body>
+</html>

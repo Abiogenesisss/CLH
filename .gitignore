@@ -1,0 +1,28 @@
+node_modules/
+.wrangler/
+.dev.vars*
+.env*
+**/code.txt
+parsed-data/
+/.tools/
+/har/
+# Keep development guides and module research on this computer.
+/docs/
+/games/*/docs/
+/games/*/README.md
+/games/dotabyss/story-ui/
+/games/muvluv-ggx/story-ui/
+/games/flower-knight-girl/story-ui/
+/games/girls-creation/story-ui/
+/games/twinkle-star-knights/story-ui/
+# Local-only game module; keep all source, assets and credentials out of Git.
+/games/minashigo-x/
+__pycache__/
+*.pyc
+*.har
+*.log
+.DS_Store
+Thumbs.db
+
+# Authorized modules are local installations, not public source.
+/games/
